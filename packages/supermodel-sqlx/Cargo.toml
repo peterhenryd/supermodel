@@ -20,5 +20,5 @@ tls-native-tls = ["sqlx/tls-native-tls"]
 tls-rustls = ["sqlx/tls-rustls"]
 
 [dependencies]
-supermodel = { path = "../supermodel" }
+supermodel = { path = "../supermodel", version = "0.1.0" }
 sqlx = { version = "0.7.3", default-features = false }
