@@ -1,0 +1,19 @@
+[package]
+name = "supermodel-macros"
+description = "Procedural macros for Supermodel, an abstract data-modeling library."
+license-file = "../../LICENSE"
+repository = "https://github.com/peterhenryd/supermodel"
+readme = "README.md"
+keywords = ["sql", "sqlx", "mysql", "postgres", "sqlite"]
+categories = ["data-structures", "database"]
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.78"
+quote = "1.0.35"
+syn = "2.0.48"
+case = "1.0.0"

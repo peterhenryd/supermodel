@@ -1,0 +1,20 @@
+[package]
+name = "supermodel-sqlx"
+description = "An sqlx implementation for Supermodel, an abstract data-modeling library."
+license-file = "../../LICENSE"
+repository = "https://github.com/peterhenryd/supermodel"
+readme = "README.md"
+keywords = ["sql", "sqlx", "mysql", "postgres", "sqlite"]
+categories = ["data-structures", "database"]
+version = "0.1.0"
+edition = "2021"
+
+[features]
+any = ["sqlx/any"]
+mysql = ["sqlx/mysql"]
+sqlite = ["sqlx/sqlite"]
+postgres = ["sqlx/postgres"]
+
+[dependencies]
+supermodel = { path = "../supermodel" }
+sqlx = { version = "0.7.3", default-features = false }

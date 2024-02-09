@@ -1,0 +1,27 @@
+[package]
+name = "supermodel"
+description = "Supermodel is an abstract data-modeling library."
+license-file = "../../LICENSE"
+repository = "https://github.com/peterhenryd/supermodel"
+readme = "../../README.md"
+keywords = ["sql", "sqlx", "mysql", "postgres", "sqlite"]
+categories = ["data-structures", "database"]
+version = "0.1.0"
+edition = "2021"
+
+[features]
+macros = ["supermodel-macros"]
+sqlx-any = ["supermodel-sqlx/any"]
+sqlx-mysql = ["supermodel-sqlx/mysql"]
+sqlx-sqlite = ["supermodel-sqlx/sqlite"]
+sqlx-postgres = ["supermodel-sqlx/postgres"]
+
+[dependencies]
+supermodel-macros = { path = "../supermodel-macros", optional = true }
+
+[dev-dependencies]
+dotenvy = "0.15.7"
+tokio = { version = "1.36.0", features = ["rt-multi-thread", "macros"] }
+sqlx = { version = "0.7.3", features = ["runtime-tokio-rustls"] }
+supermodel-sqlx = { path = "../supermodel-sqlx", features = ["postgres"] }
+supermodel = { path = "../supermodel", features = ["macros", "sqlx-postgres"] }
