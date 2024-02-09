@@ -14,6 +14,10 @@ any = ["sqlx/any"]
 mysql = ["sqlx/mysql"]
 sqlite = ["sqlx/sqlite"]
 postgres = ["sqlx/postgres"]
+runtime-async-std = ["sqlx/runtime-async-std"]
+runtime-tokio = ["sqlx/runtime-tokio"]
+tls-native-tls = ["sqlx/tls-native-tls"]
+tls-rustls = ["sqlx/tls-rustls"]
 
 [dependencies]
 supermodel = { path = "../supermodel" }
