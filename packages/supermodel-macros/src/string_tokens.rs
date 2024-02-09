@@ -1,6 +1,5 @@
 use proc_macro2::Span;
 
-#[derive(Debug)]
 pub struct StringTokens {
     pub string: String,
     pub lit_str: syn::LitStr,

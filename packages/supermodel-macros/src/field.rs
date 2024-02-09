@@ -2,13 +2,11 @@ use core::slice::Iter;
 use quote::quote;
 use crate::string_tokens::StringTokens;
 
-#[derive(Debug)]
 pub struct Field {
     pub name: StringTokens,
     pub rust_type: syn::Type,
 }
 
-#[derive(Debug)]
 pub struct Fields {
     pub id: Field,
     pub defined: Vec<Field>,
