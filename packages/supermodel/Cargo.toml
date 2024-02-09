@@ -11,10 +11,6 @@ edition = "2021"
 
 [features]
 macros = ["supermodel-macros"]
-sqlx-any = ["supermodel-sqlx/any"]
-sqlx-mysql = ["supermodel-sqlx/mysql"]
-sqlx-sqlite = ["supermodel-sqlx/sqlite"]
-sqlx-postgres = ["supermodel-sqlx/postgres"]
 
 [dependencies]
 supermodel-macros = { path = "../supermodel-macros", version = "0.1.0", optional = true }
@@ -22,6 +18,5 @@ supermodel-macros = { path = "../supermodel-macros", version = "0.1.0", optional
 [dev-dependencies]
 dotenvy = "0.15.7"
 tokio = { version = "1.36.0", features = ["rt-multi-thread", "macros"] }
-sqlx = { version = "0.7.3", features = ["runtime-tokio-rustls"] }
-supermodel-sqlx = { path = "../supermodel-sqlx", features = ["postgres"] }
-supermodel = { path = "../supermodel", features = ["macros", "sqlx-postgres"] }
+supermodel-sqlx = { path = "../supermodel-sqlx", features = ["postgres", "runtime-tokio", "tls-rustls"] }
+supermodel = { path = "../supermodel", features = ["macros"] }
