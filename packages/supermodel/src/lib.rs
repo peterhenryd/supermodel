@@ -1,5 +1,3 @@
-#![doc = include_str!("../../../README.md")]
-
 #![warn(
     clippy::all,
     clippy::restriction,
